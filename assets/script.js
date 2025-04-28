@@ -25,3 +25,12 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('[data-animate]').forEach((el) => {
   observer.observe(el);
 });
+
+
+const contactForm = document.querySelector('.contact-form');
+
+contactForm.addEventListener('submit', function(e) {
+  e.preventDefault();
+  alert('Thank you, Omkar! Your message has been sent 🚀');
+  contactForm.reset();
+});

@@ -112,28 +112,37 @@
 
   <section class="contact" id="contact">
     <div class="contact-container" data-animate="fade-in">
-      <h2>Contact Me</h2>
-      <form class="contact-form">
-        
+      <h2>Let's Connect</h2>
+      <p>Have a project idea, question, or just want to say hi? Send me a message!</p>
+  
+      <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
         <div class="form-group">
-          <input type="text" name="name" id="name" required>
-          <label for="name">Your Name</label>
+          <label for="name">
+            <i class="fas fa-user"></i>
+            <input type="text" id="name" name="name" required placeholder="Your Name">
+          </label>
         </div>
   
         <div class="form-group">
-          <input type="email" name="email" id="email" required>
-          <label for="email">Your Email</label>
+          <label for="email">
+            <i class="fas fa-envelope"></i>
+            <input type="email" id="email" name="email" required placeholder="Your Email">
+          </label>
         </div>
   
         <div class="form-group">
-          <textarea name="message" id="message" rows="5" required></textarea>
-          <label for="message">Your Message</label>
+          <label for="message">
+            <i class="fas fa-comment-dots"></i>
+            <textarea id="message" name="message" rows="5" required placeholder="Your Message"></textarea>
+          </label>
         </div>
   
-        <button type="submit" class="btn primary">Send Message</button>
+        <button type="submit" class="btn primary submit-btn">📩 Send Message</button>
       </form>
+  
     </div>
   </section>
+  
 
   
   <footer class="footer">

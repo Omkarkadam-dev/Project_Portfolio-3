@@ -270,80 +270,115 @@ body {
 
 /* About Section */
 .about {
-    background: var(--background-light);
-    padding: 5rem 2rem;
     position: relative;
-    z-index: 2;
+    padding: 8rem 2rem;
+    background: var(--background-light);
+    color: var(--text-light);
+    transition: background 0.5s, color 0.5s;
     overflow: hidden;
   }
   
-  .about-container {
-    max-width: 1200px;
+  .about-content {
+    max-width: 1100px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    background: var(--glass-color);
-    backdrop-filter: blur(20px);
-    border-radius: 30px;
-    padding: 4rem 3rem;
-    align-items: center;
-  }
-  
-  .about-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
-    border: 6px solid var(--primary-color);
-    transition: transform 0.5s;
-  }
-  
-  .about-image img:hover {
-    transform: scale(1.05) rotate(5deg);
+    text-align: center;
   }
   
   .about-content h2 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     margin-bottom: 1.5rem;
+  }
+  
+  .about-content h2 span {
     color: var(--primary-color);
   }
   
   .about-content p {
     font-size: 1.1rem;
-    line-height: 1.7;
-    margin-bottom: 2rem;
+    color: var(--secondary-color);
+    max-width: 700px;
+    margin: 0 auto 4rem;
+  }
+  
+  .cards {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .card {
+    background: var(--glass-color);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 2rem;
+    flex: 1 1 300px;
+    max-width: 350px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    z-index: 2;
+  }
+  
+  .card i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+  
+  .card h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  .card p {
+    font-size: 1rem;
     color: var(--secondary-color);
   }
   
-  .about-skills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.8rem;
-    margin-bottom: 2rem;
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   }
   
-  .about-skills span {
-    background: var(--primary-color);
-    color: white;
-    padding: 0.5rem 1.2rem;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    transition: background 0.3s;
+  /* Floating Shapes */
+  .floating-shape {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.2;
+    animation: floatShape 18s infinite ease-in-out alternate;
   }
   
-  .about-skills span:hover {
-    background: darkblue;
+  .shape1 {
+    width: 150px;
+    height: 150px;
+    background: #4f46e5;
+    top: 20%;
+    left: -60px;
+  }
+  
+  .shape2 {
+    width: 200px;
+    height: 200px;
+    background: #9333ea;
+    bottom: 10%;
+    right: -80px;
+  }
+  
+  /* Floating Animation */
+  @keyframes floatShape {
+    0% { transform: translateY(0px) translateX(0px) rotate(0deg);}
+    50% { transform: translateY(-30px) translateX(20px) rotate(180deg);}
+    100% { transform: translateY(0px) translateX(0px) rotate(360deg);}
   }
   
   /* Responsive */
   @media (max-width: 768px) {
-    .about-container {
-      grid-template-columns: 1fr;
-      text-align: center;
+    .cards {
+      flex-direction: column;
+      align-items: center;
     }
   }
-
+  
   
 /* Projects Section */
 .projects {

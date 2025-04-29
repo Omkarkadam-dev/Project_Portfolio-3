@@ -138,7 +138,7 @@ body {
 
 .secondary:hover {
   background: var(--primary-color);
-  color: white;
+  color: #60a5fa;
 }
 
 /* Skill Icons */
@@ -476,99 +476,138 @@ body {
   
 /* Contact Section */
 .contact {
+    position: relative;
+    padding: 8rem 2rem;
     background: var(--background-light);
-    padding: 6rem 2rem;
+    color: var(--text-dark);
+    overflow: hidden;
+  }
+  
+  .contact-content {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
     position: relative;
     z-index: 2;
   }
   
-  .contact-container {
-    max-width: 700px;
-    margin: 0 auto;
-    text-align: center;
-    background: var(--glass-color);
-    backdrop-filter: blur(20px);
-    border-radius: 30px;
-    padding: 4rem 3rem;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  .contact-content h2 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
   }
   
-  .contact-container h2 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+  .contact-content h2 span {
     color: var(--primary-color);
   }
   
-  .contact-container p {
-    font-size: 1.2rem;
-    margin-bottom: 3rem;
+  .contact-content p {
+    font-size: 1.1rem;
     color: var(--secondary-color);
+    margin-bottom: 3rem;
   }
   
   .contact-form {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
   }
   
-  .form-group {
-    position: relative;
-  }
-  
-  .form-group i {
-    position: absolute;
-    top: 50%;
-    left: 1rem;
-    transform: translateY(-50%);
-    color: var(--primary-color);
-    font-size: 1.2rem;
-  }
-  
-  .form-group input,
-  .form-group textarea {
-    width: 100%;
-    padding: 1rem 1rem 1rem 3rem;
-    border: 2px solid var(--primary-color);
-    border-radius: 30px;
-    background: transparent;
-    color: var(--secondary-color);
-    font-size: 1rem;
-    outline: none;
-    transition: border 0.3s;
-  }
-  
-  .form-group input::placeholder,
-  .form-group textarea::placeholder {
-    color: var(--secondary-color);
-  }
-  
-  .form-group input:focus,
-  .form-group textarea:focus {
-    border-color: darkblue;
-  }
-  
-  .submit-btn {
+  .contact-form input,
+  .contact-form textarea {
     width: 100%;
     padding: 1rem;
-    font-size: 1.2rem;
-    border-radius: 30px;
-    background: var(--primary-color);
-    color: white;
-    transition: background 0.4s, transform 0.4s;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: var(--text-dark);
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
   }
   
-  .submit-btn:hover {
-    background: darkblue;
-    transform: scale(1.05);
-    box-shadow: 0 0 15px var(--primary-color);
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder {
+    color: var(--secondary-color);
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    border-color: var(--primary-color);
+    background: rgba(0, 0, 0, 0.95);
+  }
+  
+  .btn {
+    padding: 1rem 2rem;
+    border: none;
+    background: var(--primary-color);
+    color: #fff;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .btn:hover {
+    background: var(--primary-dark);
+  }
+  
+  /* Blobs */
+  .blob {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(45deg, var(--primary-color), #60a5fa);
+    opacity: 0.2;
+    z-index: 1;
+    animation: blobAnimation infinite alternate ease-in-out;
+  }
+  
+  .blob1 {
+    width: 300px;
+    height: 300px;
+    top: -50px;
+    left: -100px;
+    animation-duration: 25s;
+  }
+  
+  .blob2 {
+    width: 250px;
+    height: 250px;
+    bottom: -60px;
+    right: -80px;
+    animation-duration: 20s;
+  }
+  
+  .blob3 {
+    width: 200px;
+    height: 200px;
+    top: 30%;
+    right: -60px;
+    animation-duration: 30s;
+  }
+  
+  /* Blobs Animation */
+  @keyframes blobAnimation {
+    0% {
+      transform: translate(0px, 0px) scale(1);
+      border-radius: 42% 58% 53% 47% / 49% 55% 45% 51%;
+    }
+    50% {
+      transform: translate(30px, -20px) scale(1.1);
+      border-radius: 52% 48% 58% 42% / 49% 49% 51% 51%;
+    }
+    100% {
+      transform: translate(-20px, 20px) scale(1);
+      border-radius: 49% 51% 47% 53% / 48% 52% 48% 52%;
+    }
   }
   
   /* Responsive */
   @media (max-width: 768px) {
-    .contact-container {
-      padding: 3rem 2rem;
+    .blob1, .blob2, .blob3 {
+      display: none;
     }
   }
+  
   
   
   /* Footer Section */

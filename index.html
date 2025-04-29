@@ -45,7 +45,7 @@
     <!-- Animated Background Blobs -->
     <div class="blob blob1"></div>
     <div class="blob blob2"></div>
-    <div class="blob blob3"></div>
+    
   </header>
 
   <section id="about" class="about">
@@ -135,38 +135,27 @@
   </section>
   
 
-  <section class="contact" id="contact">
-    <div class="contact-container" data-animate="fade-in">
-      <h2>Let's Connect</h2>
-      <p>Have a project idea, question, or just want to say hi? Send me a message!</p>
+  <section id="contact" class="contact">
+    <div class="contact-content">
+      <h2 data-animate="fade-in">Let's <span>Connect</span></h2>
+      <p data-animate="fade-in-delay">
+        Got a project idea or collaboration? Let's build something amazing together 🚀.
+      </p>
   
-      <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-        <div class="form-group">
-          <label for="name">
-            <i class="fas fa-user"></i>
-            <input type="text" id="name" name="name" required placeholder="Your Name">
-          </label>
-        </div>
-  
-        <div class="form-group">
-          <label for="email">
-            <i class="fas fa-envelope"></i>
-            <input type="email" id="email" name="email" required placeholder="Your Email">
-          </label>
-        </div>
-  
-        <div class="form-group">
-          <label for="message">
-            <i class="fas fa-comment-dots"></i>
-            <textarea id="message" name="message" rows="5" required placeholder="Your Message"></textarea>
-          </label>
-        </div>
-  
-        <button type="submit" class="btn primary submit-btn">📩 Send Message</button>
+      <form class="contact-form" data-animate="fade-in-delay2">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
       </form>
-  
     </div>
+  
+    <!-- Animated Background Blobs -->
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+    <div class="blob blob3"></div>
   </section>
+  
   
 
   

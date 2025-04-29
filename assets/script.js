@@ -16,7 +16,7 @@ themeToggle.addEventListener('click', () => {
 // Animate on Scroll
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
-    if(entry.isIntersecting){
+    if (entry.isIntersecting) {
       entry.target.classList.add('active');
     }
   });
@@ -29,7 +29,7 @@ document.querySelectorAll('[data-animate]').forEach((el) => {
 
 const contactForm = document.querySelector('.contact-form');
 
-contactForm.addEventListener('submit', function(e) {
+contactForm.addEventListener('submit', function (e) {
   e.preventDefault();
   alert('Thank you, Omkar! Your message has been sent 🚀');
   contactForm.reset();
